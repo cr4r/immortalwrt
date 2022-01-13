@@ -19,11 +19,11 @@ sed -i "s/OpenWrt/LYNX/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 sed -i "s/iw /ipconfig /g" package/kernel/mac80211/files/lib/netifd/wireless/mac80211.sh
 
 # change hostname
-sed -i "s/ImmortalWrt/LYNX/g" package/base-files/files/bin/config_generate
+sed -i "s/ImmortalWrt/cr4rWRT/g" package/base-files/files/bin/config_generate
 
 # change banner
 rm -rf ./package/emortal/default-settings/files/openwrt_banner
-svn export https://github.com/riyuejz/immortalwrt/trunk/amlogic-s9xxx/common-files/files/etc/banner package/emortal/default-settings/files/openwrt_banner
+svn export https://github.com/cr4r/immortalwrt/trunk/amlogic-s9xxx/common-files/files/etc/banner package/emortal/default-settings/files/openwrt_banner
 
 # change timezone
 sed -i -e "s/CST-8/WIB-7/g" -e "s/Shanghai/Jakarta/g" package/emortal/default-settings/files/99-default-settings-chinese
